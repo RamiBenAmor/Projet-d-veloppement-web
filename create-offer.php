@@ -10,9 +10,6 @@ if (!isset($_SESSION['company_id'])) {
 ?>
 
 
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
