@@ -158,6 +158,7 @@ $c_logged_in = isset($_SESSION['company_id']);
                 <i class="fas fa-bars"></i>
             </div>
         </div>
+        
         <div class="dropdown-menu" id="navbar">
             <ul>
               <li><a href="index.php">Accueil</a></li>
@@ -169,21 +170,22 @@ $c_logged_in = isset($_SESSION['company_id']);
                   <li><a href="company_profile.php">Profile</a></li>
                   <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
-                  <li><a href="user_connect.html">Login</a></li>
-                  <li><a href="inscrire.html">Sign In</a></li>
+                  <li><a href='#' id='connec' onclick="">Login</a></li>
+                  
                 <?php endif; ?>
               <?php endif; ?>
               <li><a href="about.html">About</a></li>
             </ul>
           </div>
-        <div id="myChoice" class="modal">
+        
+    </head>
+    <div id="myChoice" class="modal">
           <div class="modal-content">
             <p>Compte personnelle ou entreprise?</p>
             <button id="pers">personnelle</button>
             <button id="ent">Entreprise</button>
           </div>
         </div>
-    </head>
     <br>
     <br>
     <div class="palette-container">
