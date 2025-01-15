@@ -15,6 +15,24 @@ $c_logged_in = isset($_SESSION['company_id']);
   <title>Votre Site Emploi</title>
   <link rel="stylesheet" type="text/css" href="style1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    .salem{
+      display: flex;
+      align-items: center;
+      margin-left: 10% ;
+    }
+    .section {
+            background-color: rgb(190, 206, 235);
+            padding: 20px;
+            width: 400px;
+            border-radius: 10px;
+            margin-right: 20px;
+            margin-left: 20px;
+            flex: 1;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+  </style>
 </head>
 <body>
 
@@ -24,7 +42,7 @@ $c_logged_in = isset($_SESSION['company_id']);
         <i class="fas fa-bars"></i>
     </div>
   </div>
-
+  
   <div class="dropdown-menu" id="navbar">
     <ul>
       <li><a href="index.php">Accueil</a></li>
@@ -36,14 +54,20 @@ $c_logged_in = isset($_SESSION['company_id']);
           <li><a href="company_profile.php">Profile</a></li>
           <li><a href="logout.php">Logout</a></li>
         <?php else: ?>
-          <li><a href="user_connect.html">Login</a></li>
-          <li><a href="inscrire.html">Sign In</a></li>
+          <li><a href='#' id='connec' onclick="">Login</a></li>
+          <li><a href='#' id='insc'  onclick="">Sign In</a></li>
         <?php endif; ?>
       <?php endif; ?>
       <li><a href="about.php">About</a></li>
     </ul>
   </div>
-
+  <div id="myChoice" class="modal">
+  <div class="modal-content">
+    <p>Compte personnelle ou entreprise?</p>
+    <button id="pers">personnelle</button>
+    <button id="ent">Entreprise</button>
+  </div>
+</div>
   <br><br><br><br><br>
   <div>
     <h1 id="ti1">Bienvenue sur Votre Site Emploi</h1>
@@ -51,10 +75,42 @@ $c_logged_in = isset($_SESSION['company_id']);
   </div>  
   <div class="cco">
       <video src="invideo-ai-720 JobConnect_ Your Gateway to Opportunitie 2024-04-04.mp4" controls class="vid"></video>
+      <br>
+      <br>
+      <br>
+      <div class="salem">
+      <p class="section">
+      For Job Seekers: Unlock Your Career Potential
+JobConnect empowers job seekers by providing a platform to showcase their skills and experiences. Explore a multitude of job listings from leading companies, and apply to positions that match your expertise. Take the next step in your career journey with JobConnect – where opportunities meet ambition.
+      </p>
+      </div>
+      <img src="32b6b60931b8fa90fdde9de97a571949.jpg" alt="" class="vid">
+      <br>
+      <br>
+      <br>
+      <div class="salem">
+      <p class="section" >
+      For Employers: Find Your Ideal Team Members
+At JobConnect, we understand the pivotal role talent plays in the success of any business. Post your job openings, browse through a diverse pool of resumes, and connect with candidates who align with your company's vision. Our platform streamlines the hiring process, making it efficient and tailored to your unique needs
+      </p>
+      </div>
+      <img src="entreprise.jpeg" alt="" class="vid">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="salem">
+      <p class="section">
+      Why Choose JobConnect?
+Efficient Matching: Our advanced algorithms ensure that employers find the right candidates, and job seekers discover positions that align with their skills and aspirations.
+User-Friendly Interface: Navigate seamlessly through our user-friendly interface, whether you are an employer posting a job or a job seeker searching for the perfect opportunity.
+Privacy and Security: Trust is paramount in our community. JobConnect prioritizes the privacy and security of your data, providing a safe environment for your job search or recruitment needs
+      </p>
+      </div>
+      <img src="close-up-gens-affaires-travaillant-documents_1098-1263.avif" alt=""class="vid">
       <p>Explorez des offres d'emploi ou trouvez le candidat idéal.</p>
       <p>Pour continuer, connectez-vous ou inscrivez-vous :</p>
   </div>
-
   <div class="footer-info">
     <p>&copy; JobConnect</p>
     <p>Pour toute question ou assistance, n'hésitez pas à nous contacter :</p>
